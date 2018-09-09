@@ -1,0 +1,34 @@
+{
+  "name": "github",
+  "version": "1.0.0",
+  "description": "first attempt",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/birdidentity/birdidentity.github.io.git"
+  },
+  "author": "Bird Identity",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/birdidentity/birdidentity.github.io/issues"
+  },
+  "homepage": "https://github.com/birdidentity/birdidentity.github.io#readme",
+  "devDependencies": {
+    "adaptive-pixel-perfect": "^0.5.9",
+    "autoprefixer": "^9.1.5",
+    "browser-sync": "^2.24.7",
+    "cssnext": "^1.8.4",
+    "gulp": "^3.9.1",
+    "gulp-perfect-pixel": "^0.4.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "precss": "^3.1.2"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-pixel-perfect": "^1.0.0"
+  }
+}

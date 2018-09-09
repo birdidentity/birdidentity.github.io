@@ -1,0 +1,25 @@
+/* Testing autoprefixer */
+
+.autoprefixer {
+  display: flex;
+  justify-content:  space-around;
+  line-height: 24px;
+}
+
+::placeholder {
+  color: gray;
+}
+
+/* Testing precss */
+
+.precss {
+  @if 3 < 5 {
+    background: green;
+  }
+  @else {
+    background: blue;
+  }
+}
+
+/* Testing cssnext */
+.cssnext { background: color(red alpha(-10%)); }
