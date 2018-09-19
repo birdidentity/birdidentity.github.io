@@ -3,56 +3,70 @@ var gulp = require('gulp'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
-    browserSync = require('browser-sync').create(),
-    a_pp = require('adaptive-pixel-perfect').create(),
-    jquery = require('jquery'),
-    pixelperfect = require('jquery-pixel-perfect');
+    browserSync = require('browser-sync'),
+    del = require('del'), // Подключаем библиотеку для удаления файлов и папок
+    cssnano = require('cssnano'), // Подключаем пакет для минификации css
+    concat = require('gulp-concat'), //Подключаем gulp- concat для конкатенации файлов
+    cssnext = require('postcss-preset-env'),
+    responsive = require('postcss-responsive-type'),
+    cache = require('gulp-cache'); // Подключаем библиотеку кеширования
 
-var port = 3010,
-    folderForDesignScreenshots = "Design",
-    portForBrowserSync = 3000;
 
-$(document).ready(function() {
-  $('body').pixelPerfect({
-    path: 'img/index.1440.png', //default mockup path
-    draggable: true, //draggable state
-    topBtnCode: 38, //default is "Up arrow" key
-    rightBtnCode: 39, //default is "Right arrow" key
-    bottomBtnCode: 40, //default is "Bottom arrow" key
-    leftBtnCode: 37, //default is "Left arrow" key
-    opacityIncBtnCode: 81, //default is "Q" key
-    opacityDecBtnCode: 87, //defauls is "W" key
-    positionBtnCode: 70, //default is "F" key
-    visibilityBtnCode: 83 //default is "S" key
-  });
-});
 
 gulp.task('css', function () {
   var processors = [
-        autoprefixer({browsers: ['last 16 version']}),
         precss,
-        cssnext
+        cssnano({autoprefixer: {
+           browsers:['last 16 versions'],
+           add: true
+        }})
   ];
   return gulp.src('app/css/*.css')
     .pipe( sourcemaps.init() )
     .pipe( postcss(processors) )
-    .pipe( gulp.dest('./dest/css') );
+    .pipe( gulp.dest('./dest/css') )
+    .pipe(browserSync.reload({stream: true})) // обновляем css настранице
 });
 
 gulp.task('browser-sync', function() {
-  browserSync.init({
-    server: "./",
-    cors: true,
-    middleware: function (req, res, next) {
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      next();
+  browserSync({ // Выполняем browserSync
+    server: { // Определяем параметры сервера
+      baseDir: 'app' // Директория для сервера - app
     },
-    socket: {
-      domain: 'localhost:' + portForBrowserSync
-    },
-    scriptPath: function (path, port, options) {
-      return "http://" + options.getIn(['socket', 'domain']) + path;
-    }
+    notify: false // отключаем уведомления
   });
-  a_pp.start(port, folderForDesignScreenshots, portForBrowserSync);
 });
+
+gulp.task('watch', ['browser-sync' , 'css'], function() {
+  gulp.watch('app/css/**/*.css' , ['css']);
+  gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('app/js/**/*.js', browserSync.reload)
+});
+
+gulp.task('clean', function() {
+  return del.sync('dest'); // удаляем папку dest перед сборкой
+});
+
+gulp.task('build', ['clean', 'css'], function() {
+
+  var buildCss = gulp.src([ // переносим СSS стили в продакшен
+    'app/css/main.css',
+  ])
+  .pipe(gulp.dest('dest/css'));
+
+  var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
+  .pipe(gulp.dest('dest/fonts'));
+
+  var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+  .pipe(gulp.dest('dest/js'))
+
+  var buildHtml = gulp.src('app/*html') // Переносим HTML в продакшен
+  .pipe(gulp.dest('dest'));
+
+});
+
+gulp.task('clear', function() {
+  return cache.clearAll();
+});
+
+gulp.task('default', ['watch']);
