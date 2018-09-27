@@ -6,7 +6,63 @@ body {
 .header {
   margin: 0;
   padding: 0;
+  padding: 12px 16px;
   background-color: #24292E;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  flex-grow: 1;
+  order:2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navigation {
+  margin: 0;
+  padding: 0;
+
+  &__list {
+    margin: 0!important;
+    padding: 0!important;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #444d56;
+  }
+
+  &__link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.menu-button {
+    padding: 0;
+    margin: 0;
+    background: none;
+    display: block;
+    border: none;
+
+    &__img {
+      padding: 0;
+      margin: 0;
+      fill: #fff;
+    }
+
 }
