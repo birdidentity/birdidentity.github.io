@@ -15,11 +15,15 @@ var gulp = require('gulp'),
 
 gulp.task('css', function () {
   var processors = [
-        precss,
         cssnano({autoprefixer: {
-           browsers:['last 16 versions'],
-           add: true
-        }})
+          browsers:['last 16 versions'],
+          add: true
+        }}),
+        precss,
+        // cssnano({autoprefixer: {
+        //    browsers:['last 16 versions'],
+        //    add: true
+        // }})
   ];
   return gulp.src('app/css/*.css')
     .pipe( sourcemaps.init() )
@@ -31,7 +35,7 @@ gulp.task('css', function () {
 gulp.task('browser-sync', function() {
   browserSync({ // Выполняем browserSync
     server: { // Определяем параметры сервера
-      baseDir: 'app' // Директория для сервера - app
+      baseDir: './' // Директория для сервера - app
     },
     notify: false // отключаем уведомления
   });
@@ -39,8 +43,8 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', ['browser-sync' , 'css'], function() {
   gulp.watch('app/css/**/*.css' , ['css']);
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', browserSync.reload)
+  gulp.watch('./*.html', browserSync.reload);
+  gulp.watch('dest/js/**/*.js', browserSync.reload)
 });
 
 gulp.task('clean', function() {
