@@ -35,9 +35,8 @@ gulp.task('css', function () {
 gulp.task('javascript', function () {
 
   return gulp.src('app/js/*.js')
-    .pipe( sourcemaps.init() )
     .pipe( gulp.dest('./dest/js') )
-    .pipe(browserSync.reload({stream: true})) // обновляем js настранице
+    .pipe(browserSync.reload({stream: true})) // обновляем js на странице
 });
 
 gulp.task('browser-sync', function() {
@@ -52,7 +51,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', ['browser-sync' , 'css' , 'javascript'], function() {
   gulp.watch('app/css/**/*.css' , ['css']);
   gulp.watch('./*.html', browserSync.reload);
-  gulp.watch('dest/js/**/*.js', ['javascript'])
+  gulp.watch('app/js/**/*.js', ['javascript'])
 });
 
 gulp.task('clean', function() {
