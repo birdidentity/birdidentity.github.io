@@ -1,7 +1,20 @@
 @font-face {
-  font-family: 'Helvetica';
-  src: url('../fonts/HelveticaRegular.ttf');
-  src: url('../fonts/HelveticaRegular.ttf?iefix') format('ttf');
+  font-family: 'HelveticaRegular';
+  src: url('../fonts/HelveticaRegular.eot');
+  src: url('../fonts/HelveticaRegular.eot?iefix') format('eot'),
+  url('../fonts/HelveticaRegular.woff') format('woff'),
+  url('../fonts/HelveticaRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'HelveticaLight';
+  src: url('../fonts/HelveticaLight.eot');
+  src: url('../fonts/HelveticaLight.eot?iefix') format('eot'),
+  url('../fonts/HelveticaLight.woff') format('woff'),
+  url('../fonts/HelveticaLight.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

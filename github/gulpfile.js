@@ -32,6 +32,14 @@ gulp.task('css', function () {
     .pipe(browserSync.reload({stream: true})) // обновляем css настранице
 });
 
+gulp.task('javascript', function () {
+
+  return gulp.src('app/js/*.js')
+    .pipe( sourcemaps.init() )
+    .pipe( gulp.dest('./dest/js') )
+    .pipe(browserSync.reload({stream: true})) // обновляем js настранице
+});
+
 gulp.task('browser-sync', function() {
   browserSync({ // Выполняем browserSync
     server: { // Определяем параметры сервера
@@ -41,10 +49,10 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('watch', ['browser-sync' , 'css'], function() {
+gulp.task('watch', ['browser-sync' , 'css' , 'javascript'], function() {
   gulp.watch('app/css/**/*.css' , ['css']);
   gulp.watch('./*.html', browserSync.reload);
-  gulp.watch('dest/js/**/*.js', browserSync.reload)
+  gulp.watch('dest/js/**/*.js', ['javascript'])
 });
 
 gulp.task('clean', function() {
