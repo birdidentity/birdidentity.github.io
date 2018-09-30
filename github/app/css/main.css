@@ -96,7 +96,13 @@ body {
     border-radius: 3px;
     color: #24292e;
     background-color: hsla(0,0%,100%,0.125);
-  }
+    }
+
+    input::-webkit-search-decoration,
+    input::-webkit-search-cancel-button,
+    input::-webkit-search-results-button,
+    input::-webkit-search-results-decoration { display: none; }
+
 }
 
 .authorization {
@@ -117,4 +123,8 @@ body {
 
 .show {
   display: flex!important;
+}
+
+.profile-page {
+  font-family: 'HelveticaRegular', Arial, sans-serif;
 }
