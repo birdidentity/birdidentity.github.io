@@ -4,12 +4,9 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync'),
-    del = require('del'), // Подключаем библиотеку для удаления файлов и папок
-    cssnano = require('cssnano'), // Подключаем пакет для минификации css
-    concat = require('gulp-concat'), //Подключаем gulp- concat для конкатенации файлов
-    cssnext = require('postcss-preset-env'),
-    responsive = require('postcss-responsive-type'),
-    cache = require('gulp-cache'); // Подключаем библиотеку кеширования
+    del = require('del'), // added to delete files and folders
+    cssnano = require('cssnano'), // added to minimize css
+    cache = require('gulp-cache'); // added for caching
 
 
 
@@ -19,32 +16,28 @@ gulp.task('css', function () {
           browsers:['last 16 versions'],
           add: true
         }}),
-        precss,
-        // cssnano({autoprefixer: {
-        //    browsers:['last 16 versions'],
-        //    add: true
-        // }})
+        precss
   ];
   return gulp.src('app/css/*.css')
     .pipe( sourcemaps.init() )
     .pipe( postcss(processors) )
-    .pipe( gulp.dest('./dest/css') )
-    .pipe(browserSync.reload({stream: true})) // обновляем css настранице
+    .pipe( gulp.dest('./dist/css') )
+    .pipe(browserSync.reload({stream: true})) // autoreload CSS
 });
 
 gulp.task('javascript', function () {
 
   return gulp.src('app/js/*.js')
-    .pipe( gulp.dest('./dest/js') )
-    .pipe(browserSync.reload({stream: true})) // обновляем js на странице
+    .pipe( gulp.dest('./dist/js') )
+    .pipe(browserSync.reload({stream: true})) // autoreload JS
 });
 
 gulp.task('browser-sync', function() {
-  browserSync({ // Выполняем browserSync
-    server: { // Определяем параметры сервера
-      baseDir: './' // Директория для сервера - app
+  browserSync({ // browserSync initializing
+    server: { // define server parameters
+      baseDir: './' // server's folder - app
     },
-    notify: false // отключаем уведомления
+    notify: false // disabling notifications
   });
 });
 
@@ -55,24 +48,24 @@ gulp.task('watch', ['browser-sync' , 'css' , 'javascript'], function() {
 });
 
 gulp.task('clean', function() {
-  return del.sync('dest'); // удаляем папку dest перед сборкой
+  return del.sync('dist'); // del dist folder before NEW build
 });
 
 gulp.task('build', ['clean', 'css'], function() {
 
-  var buildCss = gulp.src([ // переносим СSS стили в продакшен
+  const buildCss = gulp.src([ // CSS transfer to production folder
     'app/css/main.css',
   ])
-  .pipe(gulp.dest('dest/css'));
+  .pipe(gulp.dest('dist/css'));
 
-  var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
-  .pipe(gulp.dest('dest/fonts'));
+  const buildFonts = gulp.src('app/fonts/**/*') // Fonts transfer to production folder
+  .pipe(gulp.dest('dist/fonts'));
 
-  var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
-  .pipe(gulp.dest('dest/js'))
+  const buildJs = gulp.src('app/js/**/*') // Javascript transfer to production folder
+  .pipe(gulp.dest('dist/js'))
 
-  var buildHtml = gulp.src('app/*html') // Переносим HTML в продакшен
-  .pipe(gulp.dest('dest'));
+  // var buildHtml = gulp.src('app/*html') /*OUTDATED*/
+  // .pipe(gulp.dest('dist'));
 
 });
 
