@@ -18,16 +18,16 @@ gulp.task('css', function () {
         }}),
         precss
   ];
-  return gulp.src('app/css/*.css')
+  return gulp.src('src/assets/css/*.css')
     .pipe( sourcemaps.init() )
     .pipe( postcss(processors) )
-    .pipe( gulp.dest('./dist/css') )
+    .pipe( gulp.dest('./dist/assets/css') )
     .pipe(browserSync.reload({stream: true})) // autoreload CSS
 });
 
 gulp.task('javascript', function () {
 
-  return gulp.src('app/js/*.js')
+  return gulp.src('src/js/*.js')
     .pipe( gulp.dest('./dist/js') )
     .pipe(browserSync.reload({stream: true})) // autoreload JS
 });
@@ -35,16 +35,16 @@ gulp.task('javascript', function () {
 gulp.task('browser-sync', function() {
   browserSync({ // browserSync initializing
     server: { // define server parameters
-      baseDir: './' // server's folder - app
+      baseDir: './' // server's folder - src
     },
     notify: false // disabling notifications
   });
 });
 
 gulp.task('watch', ['browser-sync' , 'css' , 'javascript'], function() {
-  gulp.watch('app/css/**/*.css' , ['css']);
+  gulp.watch('src/css/**/*.css' , ['css']);
   gulp.watch('./*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', ['javascript'])
+  gulp.watch('src/js/**/*.js', ['javascript'])
 });
 
 gulp.task('clean', function() {
@@ -54,17 +54,17 @@ gulp.task('clean', function() {
 gulp.task('build', ['clean', 'css'], function() {
 
   const buildCss = gulp.src([ // CSS transfer to production folder
-    'app/css/main.css',
+    'src/assets/css/main.css',
   ])
-  .pipe(gulp.dest('dist/css'));
+  .pipe(gulp.dest('dist/assets/css'));
 
-  const buildFonts = gulp.src('app/fonts/**/*') // Fonts transfer to production folder
-  .pipe(gulp.dest('dist/fonts'));
+  const buildFonts = gulp.src('src/assets/fonts/**/*') // Fonts transfer to production folder
+  .pipe(gulp.dest('dist/assets/fonts'));
 
-  const buildJs = gulp.src('app/js/**/*') // Javascript transfer to production folder
+  const buildJs = gulp.src('src/js/**/*') // Javascript transfer to production folder
   .pipe(gulp.dest('dist/js'))
 
-  // var buildHtml = gulp.src('app/*html') /*OUTDATED*/
+  // var buildHtml = gulp.src('src/*html') /*OUTDATED*/
   // .pipe(gulp.dest('dist'));
 
 });

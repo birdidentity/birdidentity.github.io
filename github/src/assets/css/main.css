@@ -1,24 +1,21 @@
-@import url('fonts.css');
+$HelveticaRegular: 'HelveticaRegular' , Arial, sans-serif;
+$darkgray: #24292E;
 
-body {
+.clean {
   margin: 0;
   padding: 0;
 }
 
 .header {
-  margin: 0;
-  padding: 0;
   padding: 12px 16px;
-  background-color: #24292E;
+  background-color: $darkgray;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
 }
 
-.wrapper {
-  margin: 0;
-  padding: 0;
+.flex-wrapper {
   margin-top: 13px;
   width: 100%;
   flex-grow: 1;
@@ -28,49 +25,40 @@ body {
   justify-content: space-between;
 }
 
-.navigation {
-  margin: 0;
-  padding: 0;
+.nav {
 
   &__list {
-    margin: 0!important;
-    padding: 0!important;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
     list-style-type: none;
     display: flex;
     flex-direction: column;
   }
 
   &__item {
-    margin: 0;
-    padding: 0;
     border-top: 1px solid #444d56;
     font-size: 16px;
   }
 
   &__link {
     display: block;
-    margin: 0;
-    padding: 0;
     padding-top: 16px;
     padding-bottom: 16px;
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-family: 'HelveticaRegular' , Arial, sans-serif;
+    font-family: $HelveticaRegular;
     font-weight: 300;
   }
 }
 
 .menu-button {
-    padding: 0;
-    margin: 0;
     background: none;
     display: block;
     border: none;
     align-self: flex-end;
 
     &__img {
-      padding: 0;
-      margin: 0;
       fill: #fff;
     }
 
@@ -98,17 +86,17 @@ body {
     background-color: hsla(0,0%,100%,0.125);
     }
 
-    input::-webkit-search-decoration,
-    input::-webkit-search-cancel-button,
-    input::-webkit-search-results-button,
-    input::-webkit-search-results-decoration { display: none; }
+  &__input::-webkit-search-decoration,
+  &__input::-webkit-search-cancel-button,
+  &__input::-webkit-search-results-button,
+  &__input::-webkit-search-results-decoration { display: none; } /* DELETING standard cross in the search field */
 
 }
 
 .authorization {
   padding: 8px 0 8px 0;
   font-size: 16px;
-  font-family: 'HelveticaRegular', Arial, sans-serif;
+  font-family: $HelveticaRegular;
 
   &__link {
     text-decoration: none;
@@ -122,9 +110,9 @@ body {
 }
 
 .show {
-  display: flex!important;
+  display: flex;
 }
 
 .profile-page {
-  font-family: 'HelveticaRegular', Arial, sans-serif;
+  font-family: $HelveticaRegular;
 }
