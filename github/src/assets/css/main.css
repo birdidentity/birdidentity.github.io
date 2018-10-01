@@ -114,5 +114,6 @@ $darkgray: #24292E;
 }
 
 .profile-page {
+  padding: 15px;
   font-family: $HelveticaRegular;
 }

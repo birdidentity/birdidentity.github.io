@@ -42,7 +42,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', ['browser-sync' , 'css' , 'javascript'], function() {
-  gulp.watch('src/css/**/*.css' , ['css']);
+  gulp.watch('src/assets/css/**/*.css' , ['css']);
   gulp.watch('./*.html', browserSync.reload);
   gulp.watch('src/js/**/*.js', ['javascript'])
 });
