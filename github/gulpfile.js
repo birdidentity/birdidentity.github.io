@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     precss = require('precss'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
@@ -62,7 +62,10 @@ gulp.task('build', ['clean', 'css'], function() {
   .pipe(gulp.dest('dist/assets/fonts'));
 
   const buildJs = gulp.src('src/js/**/*') // Javascript transfer to production folder
-  .pipe(gulp.dest('dist/js'))
+  .pipe(gulp.dest('dist/js'));
+
+  const buildImg = gulp.src('src/assets/img/**/*')
+  .pipe(gulp.dest('dist/assets/img'));
 
   // var buildHtml = gulp.src('src/*html') /*OUTDATED*/
   // .pipe(gulp.dest('dist'));

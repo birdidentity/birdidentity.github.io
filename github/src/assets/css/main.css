@@ -1,5 +1,8 @@
 $HelveticaRegular: 'HelveticaRegular' , Arial, sans-serif;
 $darkgray: #24292E;
+$text_gray: #4a4a4a;
+$border_gray: #979797;
+$profile_bg: #FAFBFC;
 
 .clean {
   margin: 0;
@@ -109,11 +112,79 @@ $darkgray: #24292E;
   }
 }
 
-.show {
-  display: flex;
-}
-
 .profile-page {
   padding: 15px;
   font-family: $HelveticaRegular;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $profile_bg;
+
+  &__logo {
+    align-self: flex-start;
+  }
+
+  &__info {
+    padding-left: 15px;
+    flex:1;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  &__description {
+    margin-top: 17px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $text_gray;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  &__address {
+    flex-grow: 1;
+    flex-basis: 100%;
+    margin-top: 20px;
+    font-size: 12px;
+    font-style: normal;
+  }
+
+  &__item {
+    margin-right: 4px;
+  }
+
+  &__item:first-child .profile-page__img {
+    margin-bottom: -5px;
+  }
+
+  &__img {
+    margin-bottom: -3px;
+  }
+
+  &__contacts {
+
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $text_gray;
+  }
+}
+
+.content-nav {
+  border-bottom: 1px solid $border_gray;
+  display: flex;
+
+  &__tab {
+    text-decoration: none;
+    margin-bottom: -3px;
+    background-color: white;
+  }
+}
+
+.show {
+  display: flex;
 }
