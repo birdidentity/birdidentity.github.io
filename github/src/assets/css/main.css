@@ -3,6 +3,7 @@ $darkgray: #24292E;
 $text_gray: #4a4a4a;
 $border_gray: #979797;
 $profile_bg: #FAFBFC;
+$counter_color: #D8D8D8;
 
 .clean {
   margin: 0;
@@ -180,8 +181,17 @@ $profile_bg: #FAFBFC;
 
   &__tab {
     text-decoration: none;
-    margin-bottom: -3px;
+    margin-bottom: -1px;
     background-color: white;
+  }
+  &__tab::after {
+    content: "1";
+    display: inline-block;
+    text-align: center;
+    width: 22px;
+    height: 16px;
+    border-radius: 6px;
+    background-color: $counter_color;
   }
 }
 
