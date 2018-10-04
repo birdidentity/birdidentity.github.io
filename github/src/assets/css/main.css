@@ -4,6 +4,7 @@ $text_gray: #4a4a4a;
 $border_gray: #979797;
 $profile_bg: #FAFBFC;
 $counter_color: #D8D8D8;
+$border_hover: #E3610A;
 
 .clean {
   margin: 0;
@@ -93,7 +94,9 @@ $counter_color: #D8D8D8;
   &__input::-webkit-search-decoration,
   &__input::-webkit-search-cancel-button,
   &__input::-webkit-search-results-button,
-  &__input::-webkit-search-results-decoration { display: none; } /* DELETING standard cross in the search field */
+  &__input::-webkit-search-results-decoration {
+    display: none;
+    } /* DELETING standard cross in the search field */
 
 }
 
@@ -176,22 +179,68 @@ $counter_color: #D8D8D8;
 }
 
 .content-nav {
+  padding-left: 3px;
+  padding-right: 3px;
   border-bottom: 1px solid $border_gray;
   display: flex;
 
   &__tab {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: $HelveticaRegular;
+    color: $text_gray;
+    font-size: 12px;
+    line-height: 14px;
     text-decoration: none;
     margin-bottom: -1px;
     background-color: white;
+    border-bottom: 1px solid $border_gray;
   }
-  &__tab::after {
-    content: "1";
-    display: inline-block;
-    text-align: center;
-    width: 22px;
-    height: 16px;
-    border-radius: 6px;
+
+  &__tab:hover {
+    border-bottom: none;
+    padding-top: 12px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-top: 3px solid $border_hover;
+    border-left: 1px solid $border_gray;
+    border-right: 1px solid $border_gray;
+    font-weight: bold;
+  }
+
+  &__counter {
+    margin-left: 3px;
+    padding-left: 4px;
+    padding-right: 5px;
     background-color: $counter_color;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+
+}
+
+.pinned-rep {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+
+  &__title {
+    font-size: 16px;
+    font-family: $HelveticaRegular;
+    line-height: 19px;
+    color: $text_gray;
+  }
+
+  &__content {
+    border: 1px solid $border_gray;
+    border-radius: 2px;
+    padding-right: 33px;
+    padding-left: 20px;
+    padding-bottom: 18px;
+    margin-bottom: 11px;
   }
 }
 
