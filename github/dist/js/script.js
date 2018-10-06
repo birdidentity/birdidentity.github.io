@@ -6,20 +6,12 @@ menuButton.addEventListener('click', function() {
 });
 
 const profileDescription = document.querySelector('p.profile-page__description');
-const repositorieDescription = document.querySelector('.rep__descr');
+const repositorieDescription = document.querySelector('p.rep__descr');
 
-const arrShow = [profileDescription, repositorieDescription];
+const arrShow = [repositorieDescription , profileDescription];
 
-arrShow[].addEventListener('click', function() {
-  profileDescription.classList.toggle('show');
-});
-
-arrShow[].forEach(arrShow, function(item) {
-      item.addEventListener('click', function() {
-        if (item.classList.contains('show')) {
-        item.classList.remove('show');
-      } else {
-        item.classList.add('show');
-      }
-  });
+arrShow.forEach( function(item, i , arr) {
+  item.addEventListener('click', function() {
+     item.classList.toggle('show');
+   });
 });
