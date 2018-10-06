@@ -159,12 +159,20 @@
       </section>
       <form action="" class="rep-search">
         <input class="rep-search__input" type="search" name="" placeholder="Search repositories...">
-        <select class="rep-search__type" name="type">
-          <option value="All">All</option>
-        </select>
-        <select name="language" class="rep-search__language">
-          <option value="All">All</option>
-        </select>
+        <div class="rep-search__wrapper">
+          <select class="rep-search__select" name="type">
+            <option class="rep-search__option" value="All" selected>All</option>
+            <option class="rep-search__option" value="1">1</option>
+            <option class="rep-search__option" value="3">2</option>
+          </select>
+        </div>
+        <div class="rep-search__wrapper">
+          <select name="language" class="rep-search__select">
+            <option class="rep-search__option" value="All">All</option>
+            <option class="rep-search__option" value="1">1</option>
+            <option class="rep-search__option" value="3">2</option>
+          </select>
+        </div>
       </form>
       <div class="reps-list">
         <section class="rep">
@@ -450,7 +458,7 @@
           </ul>
         </section>
       </div>
-      <div class="else">
+      <aside class="else">
         <div class="languages">
           <h3 class="languages__title">Top languages</h3>
           <span class="languages__item">
@@ -488,7 +496,7 @@
             <li class="people__item"><img src="" alt="subscriber" class="people__img"></li>
           </ul>
         </div>
-      </div>
+      </aside>
     </div>
     <div class="content__people">
       <section class="person">
