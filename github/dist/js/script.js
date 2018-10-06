@@ -6,7 +6,20 @@ menuButton.addEventListener('click', function() {
 });
 
 const profileDescription = document.querySelector('p.profile-page__description');
+const repositorieDescription = document.querySelector('.rep__descr');
 
-profileDescription.addEventListener('click', function() {
+const arrShow = [profileDescription, repositorieDescription];
+
+arrShow[].addEventListener('click', function() {
   profileDescription.classList.toggle('show');
+});
+
+arrShow[].forEach(arrShow, function(item) {
+      item.addEventListener('click', function() {
+        if (item.classList.contains('show')) {
+        item.classList.remove('show');
+      } else {
+        item.classList.add('show');
+      }
+  });
 });
