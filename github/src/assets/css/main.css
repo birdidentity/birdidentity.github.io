@@ -469,6 +469,24 @@ $bg_white: #F1F8FF;
   display: none;
 }
 
+.content {
+  &__people {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+  }
+}
+
+.person {
+  border-bottom: 1px solid $border_gray;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__img {
+    align-self: baseline;
+  }
+}
+
 
 .show {
   display: flex;
