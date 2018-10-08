@@ -621,6 +621,12 @@ $disabled: rgba(155, 155, 155, 0.7985);
     text-decoration: none;
     color: $blue_title;
   }
+
+  &__link:hover,
+  &__link:focus {
+    outline: none;
+    text-decoration: underline;
+  }
 }
 
 .right-list {
@@ -642,6 +648,12 @@ $disabled: rgba(155, 155, 155, 0.7985);
   &__link {
     text-decoration: none;
     color: $blue_title;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    outline: none;
+    text-decoration: underline;
   }
 }
 
