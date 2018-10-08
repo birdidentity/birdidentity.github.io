@@ -541,6 +541,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
 }
 
 .pagination {
+  margin-bottom: 57px;
 
   &__button {
     background-color: inherit;
@@ -574,6 +575,73 @@ $disabled: rgba(155, 155, 155, 0.7985);
 
   .disabled {
     color: $disabled;
+  }
+}
+
+.footer {
+  width: calc(100% - 40px);
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1px solid $border_gray;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 33px;
+}
+
+.copyrights {
+  margin-top: 10px;
+  text-align: right;
+  width: 100%;
+  order:4;
+  align-self: flex-end;
+  color: $text_gray;
+  font-family: $HelveticaRegular;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.left-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  font-family: $HelveticaRegular;
+  font-size: 12px;
+  line-height: 14px;
+  width: calc( (100% - 73px)/2 );
+
+  &__item {
+    margin-right: 6px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $blue_title;
+  }
+}
+
+.right-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px;
+  padding-left: 0;
+  list-style-type: none;
+  font-family: $HelveticaRegular;
+  font-size: 12px;
+  line-height: 14px;
+  width: calc( (100% - 73px)/2 );
+
+  &__item {
+    margin-right: 6px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $blue_title;
   }
 }
 
