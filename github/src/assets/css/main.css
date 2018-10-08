@@ -7,6 +7,7 @@ $counter_color: #D8D8D8;
 $border_hover: #E3610A;
 $blue_title: #3077DB;
 $bg_white: #F1F8FF;
+$disabled: rgba(155, 155, 155, 0.7985);
 
 .clean {
   margin: 0;
@@ -473,17 +474,106 @@ $bg_white: #F1F8FF;
   &__people {
     margin-left: 20px;
     margin-right: 20px;
-    padding-top: 20px;
   }
 }
 
 .person {
+  margin-top: 20px;
   border-bottom: 1px solid $border_gray;
   display: flex;
   flex-wrap: wrap;
 
   &__img {
     align-self: baseline;
+  }
+
+  &__name {
+    min-width: 200px;
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: center;
+    font-family: $HelveticaRegular;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &__descr {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    color: $text_gray;
+    font-family: $HelveticaRegular;
+    font-size: 12px;
+    line-height: 14px;
+    overflow: hidden;
+  }
+
+  &__stack {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  &__skill {
+    background-color: $bg_white;
+    border-radius: 2px;
+    font-family: $HelveticaRegular;
+    color: $blue_title;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 15px 7px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+
+}
+
+.paginate-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination {
+
+  &__button {
+    background-color: inherit;
+    border-left: none;
+    border-bottom: 1px solid $border_gray;
+    border-top: 1px solid $border_gray;
+    border-right: 1px solid $border_gray;
+    font-family: $HelveticaRegular;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: $blue_title;
+    padding: 10px;
+  }
+
+  &__button:first-child {
+    border-left: 1px solid $border_gray;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+  }
+
+  &__button:last-child {
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+
+  .active {
+    background-color: $blue_title;
+    color: white;
+  }
+
+  .disabled {
+    color: $disabled;
   }
 }
 
