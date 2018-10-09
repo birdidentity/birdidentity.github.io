@@ -1,16 +1,16 @@
 const menuButton = document.querySelector('.menu-button');
-const navigation = document.querySelector('.flex-wrapper');
+const navigation = document.querySelector('.nav__wrapper');
 
 menuButton.addEventListener('click', function() {
   navigation.classList.toggle('show');
 });
 
-const profileDescription = document.querySelector('p.profile-page__description');
-const repositorieDescription = document.querySelector('p.rep__descr');
+const profileDescription = document.querySelector('.profile-page .profile-page__description');
+const repositorieDescription = document.querySelector('.rep__descr');
 
 const arrShow = [repositorieDescription , profileDescription];
 
-arrShow.forEach( function(item, i , arr) {
+arrShow.forEach( function(item) {
   item.addEventListener('click', function() {
      item.classList.toggle('show');
    });

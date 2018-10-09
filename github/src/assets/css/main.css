@@ -9,6 +9,12 @@ $blue_title: #3077DB;
 $bg_white: #F1F8FF;
 $disabled: rgba(155, 155, 155, 0.7985);
 
+%Helvetica12px {
+  font-family: $HelveticaRegular;
+  font-size: 12px;
+  line-height: 14px;
+}
+
 .clean {
   margin: 0;
   padding: 0;
@@ -23,7 +29,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
   align-items: flex-start;
 }
 
-.flex-wrapper {
+.nav__wrapper {
   margin-top: 13px;
   width: 100%;
   flex-grow: 1;
@@ -90,7 +96,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
     line-height: 20px;
     width: 100%;
     border-radius: 3px;
-    color: #24292e;
+    color: white;
     background-color: hsla(0,0%,100%,0.125);
     }
 
@@ -142,8 +148,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
 
   &__description {
     margin-top: 17px;
-    font-size: 12px;
-    line-height: 14px;
+    @extend %Helvetica12px;
     color: $text_gray;
     overflow: hidden;
     display: -webkit-box;
@@ -155,7 +160,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
     flex-grow: 1;
     flex-basis: 100%;
     margin-top: 20px;
-    font-size: 12px;
+    @extend %Helvetica12px;
     font-style: normal;
   }
 
@@ -193,10 +198,8 @@ $disabled: rgba(155, 155, 155, 0.7985);
     padding-right: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family: $HelveticaRegular;
+    @extend %Helvetica12px;
     color: $text_gray;
-    font-size: 12px;
-    line-height: 14px;
     text-decoration: none;
     margin-bottom: -1px;
     background-color: white;
@@ -218,6 +221,8 @@ $disabled: rgba(155, 155, 155, 0.7985);
     margin-left: 3px;
     padding-left: 4px;
     padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     background-color: $counter_color;
     border-radius: 6px;
     font-weight: bold;
@@ -255,9 +260,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
   }
 
   &__dscr {
-    font-family: $HelveticaRegular;
-    font-size: 12px;
-    line-height: 14px;
+    @extend %Helvetica12px;
     color: $text_gray;
   }
 }
@@ -286,7 +289,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
   flex-wrap: wrap;
   text-align: center;
 
-  &__input[type="search"] {
+  &__input--search {
     margin-top: 5px;
     order: 2;
     min-width: 270px;
@@ -388,9 +391,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 0;
-    font-family: $HelveticaRegular;
-    font-size: 12px;
-    line-height: 14px;
+    @extend %Helvetica12px;
     color: $text_gray;
     overflow: hidden;
     display: -webkit-box;
@@ -414,10 +415,8 @@ $disabled: rgba(155, 155, 155, 0.7985);
     padding-bottom: 7px;
     padding-left: 15px;
     padding-right: 15px;
-    font-family: $HelveticaRegular;
+    @extend %Helvetica12px;
     font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
     color: $blue_title;
     background-color: $bg_white;
     border-radius: 2px;
@@ -504,9 +503,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     color: $text_gray;
-    font-family: $HelveticaRegular;
-    font-size: 12px;
-    line-height: 14px;
+    @extend %Helvetica12px;
     overflow: hidden;
   }
 
@@ -522,9 +519,8 @@ $disabled: rgba(155, 155, 155, 0.7985);
   &__skill {
     background-color: $bg_white;
     border-radius: 2px;
-    font-family: $HelveticaRegular;
+    @extend %Helvetica12px;
     color: $blue_title;
-    font-size: 12px;
     font-weight: 700;
     padding: 5px 15px 7px;
     margin-top: 5px;
@@ -533,7 +529,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
 
 }
 
-.paginate-container {
+.paginate__container {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 20px;
@@ -596,9 +592,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
   order:4;
   align-self: flex-end;
   color: $text_gray;
-  font-family: $HelveticaRegular;
-  font-size: 12px;
-  line-height: 14px;
+  @extend %Helvetica12px;
 }
 
 .left-list {
@@ -608,9 +602,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
   margin: 0;
   padding-left: 0;
   list-style-type: none;
-  font-family: $HelveticaRegular;
-  font-size: 12px;
-  line-height: 14px;
+  @extend %Helvetica12px;
   width: calc( (100% - 73px)/2 );
 
   &__item {
@@ -624,7 +616,6 @@ $disabled: rgba(155, 155, 155, 0.7985);
 
   &__link:hover,
   &__link:focus {
-    outline: none;
     text-decoration: underline;
   }
 }
@@ -636,9 +627,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
   margin: 0px;
   padding-left: 0;
   list-style-type: none;
-  font-family: $HelveticaRegular;
-  font-size: 12px;
-  line-height: 14px;
+  @extend %Helvetica12px;
   width: calc( (100% - 73px)/2 );
 
   &__item {
@@ -655,6 +644,10 @@ $disabled: rgba(155, 155, 155, 0.7985);
     outline: none;
     text-decoration: underline;
   }
+}
+
+@@media screen and (min-width: 768px) {
+
 }
 
 
