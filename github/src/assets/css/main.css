@@ -208,17 +208,6 @@ $disabled: rgba(155, 155, 155, 0.7985);
     border-bottom: 1px solid $border_gray;
   }
 
-  &__tab:hover {
-    border-bottom: none;
-    padding-top: 12px;
-    padding-left: 14px;
-    padding-right: 14px;
-    border-top: 3px solid $border_hover;
-    border-left: 1px solid $border_gray;
-    border-right: 1px solid $border_gray;
-    font-weight: bold;
-  }
-
   &__counter {
     margin-left: 3px;
     padding-left: 4px;
@@ -472,9 +461,19 @@ $disabled: rgba(155, 155, 155, 0.7985);
 }
 
 .content {
+
+  &__repositories {
+    display: none;
+  }
+
   &__people {
+    display: none;
     margin-left: 20px;
     margin-right: 20px;
+  }
+
+  &__projects {
+    display: none;
   }
 }
 
@@ -761,7 +760,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
       border-top-left-radius: 2px;
       border-bottom-left-radius: 2px;
       margin-right: 2px;
-      padding-left: 5px;
+      padding-left: 8px;
       padding-right: 5px;
       -webkit-appearance: none;
     }
@@ -769,6 +768,13 @@ $disabled: rgba(155, 155, 155, 0.7985);
     &__input {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      @extend %Helvetica12px;
+      font-weight: bold;
+    }
+
+    .profile-page {
+      padding-right: calc( (100% - 984px)/2 );
+      padding-left: calc( (100% - 984px)/2 );
     }
   }
 
@@ -777,6 +783,20 @@ $disabled: rgba(155, 155, 155, 0.7985);
   }
 }
 
+.active-tab {
+  border-bottom: none;
+  padding-top: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-top: 3px solid $border_hover;
+  border-left: 1px solid $border_gray;
+  border-right: 1px solid $border_gray;
+  font-weight: bold;
+}
+
+.show-tab {
+  display: block;
+}
 
 .show {
   display: flex;

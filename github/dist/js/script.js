@@ -35,3 +35,39 @@ paginationBtns.forEach( function(item, i , arr) {
      }
    });
 });
+
+
+const searchForm = document.querySelector('.search-form__input');
+
+if (screen.width >= 1024) {
+  searchForm.setAttribute('placeholder', 'Search');
+}else {
+
+};
+
+const repositories = document.querySelector('.content__repositories');
+const people = document.querySelector('.content__people');
+const projects = document.querySelector('.projects');
+
+const contentNav = document.querySelectorAll('.content-nav__tab');
+const arrContent = [repositories, people, projects];
+
+
+contentNav.forEach( function(item, i , arr) {
+
+  item.addEventListener('click' , function() {
+
+    if(!item.classList.contains('active-tab')) {
+      alert(arrContent);
+      for(var j = 0; j < contentNav.length; j++) {
+        contentNav[j].classList.remove('active-tab');
+        arrContent[j].classList.remove('show-tab');
+      }
+
+      item.classList.add('active-tab');
+      arrContent[i].classList.add('show-tab');
+    }else {
+
+    }
+  })
+})
