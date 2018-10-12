@@ -59,10 +59,7 @@ contentNav.forEach( function(item, i , arr) {
 
     if(!item.classList.contains('active-tab')) {
 
-      for(var j = 0; j < contentNav.length; j++) {
-        contentNav[j].classList.remove('active-tab');
-        arrContent[j].classList.remove('show-tab');
-      }
+      tabs();
       item.classList.add('active-tab');
       arrContent[i].classList.add('show-tab');
 
@@ -71,3 +68,18 @@ contentNav.forEach( function(item, i , arr) {
     }
   });
 });
+
+const peopleCounter = document.querySelector('.people__counter');
+
+peopleCounter.addEventListener('click' , function() {
+  tabs();
+  contentNav[1].classList.add('active-tab');
+  arrContent[1].classList.add('show-tab');
+});
+
+function tabs() {
+  for(var j = 0; j < contentNav.length; j++) {
+    contentNav[j].classList.remove('active-tab');
+    arrContent[j].classList.remove('show-tab');
+  }
+};
