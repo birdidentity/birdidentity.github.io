@@ -17,6 +17,11 @@ $disabled: rgba(155, 155, 155, 0.7985);
   line-height: 14px;
 }
 
+%paddingCalc {
+  padding-right: calc( (100% - 984px)/2 );
+  padding-left: calc( (100% - 984px)/2 );
+}
+
 .clean {
   margin: 0;
   padding: 0;
@@ -716,8 +721,7 @@ $disabled: rgba(155, 155, 155, 0.7985);
 @media screen and (min-width: 1024px) {
   .header {
     flex-wrap: nowrap;
-    padding-right: calc( (100% - 984px)/2 );
-    padding-left: calc( (100% - 984px)/2 );
+    @extend %paddingCalc;
   }
 
   .nav {
@@ -773,13 +777,31 @@ $disabled: rgba(155, 155, 155, 0.7985);
     }
 
     .profile-page {
-      padding-right: calc( (100% - 984px)/2 );
-      padding-left: calc( (100% - 984px)/2 );
+      @extend %paddingCalc;
     }
+  }
+
+  .content {
+    
+    &__repositories,
+    &__people,
+    &__projects {
+      @extend %paddingCalc;
+    }
+
   }
 
   .menu-button {
     display: none;
+  }
+
+
+  .rep-else-wrapper {
+    @extend %paddingCalc;
+  }
+
+  .else {
+    display: block;
   }
 }
 
