@@ -49,7 +49,7 @@ const repositories = document.querySelector('.content__repositories');
 const people = document.querySelector('.content__people');
 const projects = document.querySelector('.content__projects');
 
-const contentNav = document.querySelectorAll('.content-nav__tab');
+const contentNav = document.querySelectorAll('.content-tabs__tab');
 const arrContent = [repositories, people, projects];
 
 

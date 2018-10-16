@@ -2,21 +2,21 @@ const gulp = require('gulp'),
     precss = require('precss'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano'), // added to minimize css
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync'),
     del = require('del'), // added to delete files and folders
-    cssnano = require('cssnano'), // added to minimize css
     cache = require('gulp-cache'); // added for caching
 
 
 
 gulp.task('css', function () {
   var processors = [
+        precss,
         cssnano({autoprefixer: {
           browsers:['last 16 versions'],
           add: true
-        }}),
-        precss
+        }})
   ];
   return gulp.src('src/assets/css/*.css')
     .pipe( sourcemaps.init() )
