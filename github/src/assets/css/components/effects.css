@@ -1,0 +1,27 @@
+.show {
+  display: flex;
+}
+
+.active-tab {
+  border-bottom: none;
+  padding-top: 12px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-top: 3px solid $border_hover;
+  border-left: 1px solid $border_gray;
+  border-right: 1px solid $border_gray;
+  font-weight: bold;
+}
+
+.show-tab {
+  display: block;
+}
+
+.active {
+  background-color: $blue_title;
+  color: white;
+}
+
+.disabled {
+  color: $disabled;
+}

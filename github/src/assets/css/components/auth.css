@@ -1,0 +1,15 @@
+.authorization {
+  padding: 8px 0 8px 0;
+  font-size: 16px;
+  font-family: $HelveticaRegular;
+
+  &__link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  &__item {
+    color: #586069;
+  }
+}

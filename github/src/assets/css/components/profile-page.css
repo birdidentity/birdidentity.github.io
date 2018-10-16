@@ -1,0 +1,83 @@
+.profile-page {
+  padding: 15px;
+  font-family: $HelveticaRegular;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $profile_bg;
+
+  &__logo {
+    align-self: flex-start;
+  }
+
+  &__info {
+    padding-left: 15px;
+    flex:1;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  &__description {
+    margin-top: 17px;
+    @extend %Helvetica12px;
+    color: $text_gray;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  &__address {
+    flex-grow: 1;
+    flex-basis: 100%;
+    margin-top: 20px;
+    @extend %Helvetica12px;
+    font-style: normal;
+  }
+
+  &__item {
+    margin-right: 4px;
+  }
+
+  &__item:first-child .profile-page__img {
+    margin-bottom: -5px;
+  }
+
+  &__img {
+    margin-bottom: -3px;
+  }
+
+  &__contacts {
+
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $text_gray;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .profile-page {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+
+    &__logo {
+      float: left;
+      margin-right: 17px;
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .profile-page {
+    @extend %paddingCalc;
+  }
+
+}

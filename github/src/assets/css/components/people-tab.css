@@ -1,0 +1,67 @@
+.person {
+  margin-top: 20px;
+  border-bottom: $borderGray;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__img {
+    align-self: baseline;
+  }
+
+  &__name {
+    min-width: 200px;
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: center;
+    font-family: $HelveticaRegular;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &__descr {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    color: $text_gray;
+    @extend %Helvetica12px;
+    overflow: hidden;
+  }
+
+  &__stack {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  &__skill {
+    background-color: $bg_white;
+    border-radius: 2px;
+    @extend %Helvetica12px;
+    color: $blue_title;
+    font-weight: 700;
+    padding: 5px 15px 7px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .person {
+
+    &__name {
+      width: calc(100% - 58px);
+      margin-left: 10px;
+      align-self: flex-start;
+      text-align: left;
+    }
+
+  }
+
+}

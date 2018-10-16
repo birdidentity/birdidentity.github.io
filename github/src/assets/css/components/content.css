@@ -1,0 +1,31 @@
+.content {
+
+  &__repositories {
+    display: none;
+  }
+
+  &__people {
+    display: none;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  &__projects {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .content {
+
+    &__repositories,
+    &__people,
+    &__projects {
+      @extend %paddingCalc;
+    }
+
+  }
+
+}

@@ -1,0 +1,25 @@
+$HelveticaRegular: 'HelveticaRegular' , Arial, sans-serif;
+$darkgray: #24292E;
+$text_gray: #4a4a4a;
+$border_gray: #979797;
+$profile_bg: #FAFBFC;
+$counter_color: #D8D8D8;
+$border_hover: #E3610A;
+$blue_title: #3077DB;
+$bg_white: #F1F8FF;
+$bg_search: #3F4448;
+$select-color: #B4B7B9;
+$counter: #9B9B9B;
+$disabled: rgba(155, 155, 155, 0.7985);
+$borderGray: 1px solid $border_gray;
+
+%Helvetica12px {
+  font-family: $HelveticaRegular;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+%paddingCalc {
+  padding-right: calc( (100% - 984px)/2 );
+  padding-left: calc( (100% - 984px)/2 );
+}

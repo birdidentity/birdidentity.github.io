@@ -1,0 +1,48 @@
+.content-tabs {
+  padding-left: 3px;
+  padding-right: 3px;
+  border-bottom: $borderGray;
+  display: flex;
+
+  &__tab {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @extend %Helvetica12px;
+    color: $text_gray;
+    text-decoration: none;
+    margin-bottom: -1px;
+    background-color: white;
+    border-bottom: $borderGray;
+  }
+
+  &__counter {
+    margin-left: 3px;
+    padding-left: 4px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: $counter_color;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .content-tabs {
+    padding-left: 20px;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .content-tabs {
+    @extend %paddingCalc;
+  }
+
+}
