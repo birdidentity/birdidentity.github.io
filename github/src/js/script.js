@@ -20,9 +20,7 @@ const paginationBtns = document.querySelectorAll('.pagination__button');
 
 paginationBtns.forEach( function(item, i , arr) {
   item.addEventListener('click', function() {
-     if(item.classList.contains('active')) {
-
-     }else {
+     if(!item.classList.contains('active')) {
        for(var i = 0; i < arr.length; i++) {
          arr[i].classList.remove('active');
        }
@@ -41,8 +39,6 @@ const searchForm = document.querySelector('.search-form__input');
 
 if (screen.width >= 1024) {
   searchForm.setAttribute('placeholder', 'Search');
-}else {
-
 };
 
 const repositories = document.querySelector('.content__repositories');
@@ -53,7 +49,7 @@ const contentNav = document.querySelectorAll('.content-tabs__tab');
 const arrContent = [repositories, people, projects];
 
 
-contentNav.forEach( function(item, i , arr) {
+contentNav.forEach( function(item, i) {
 
   item.addEventListener('click' , function() {
 
@@ -63,9 +59,7 @@ contentNav.forEach( function(item, i , arr) {
       item.classList.add('active-tab');
       arrContent[i].classList.add('show-tab');
 
-    }else {
-
-    }
+    };
   });
 });
 
