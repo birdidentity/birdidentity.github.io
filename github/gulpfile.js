@@ -6,21 +6,19 @@ const gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync'),
     del = require('del'), // added to delete files and folders
-    cache = require('gulp-cache'); // added for caching
-
-
+    cache = require('gulp-cache'), // added for caching
+    EasyImport = require('postcss-easy-import');
 
 gulp.task('css', function () {
-  var processors = [
+  var plugins = [
+        EasyImport,
         precss,
-        cssnano({autoprefixer: {
-          browsers:['last 16 versions'],
-          add: true
-        }})
+        autoprefixer({browsers: ['last 2 version']}),
+        cssnano(),
   ];
   return gulp.src('src/assets/css/*.css')
     .pipe( sourcemaps.init() )
-    .pipe( postcss(processors) )
+    .pipe(postcss(plugins))
     .pipe( gulp.dest('./dist/assets/css') )
     .pipe(browserSync.reload({stream: true})) // autoreload CSS
 });
