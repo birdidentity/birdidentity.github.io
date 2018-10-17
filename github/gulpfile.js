@@ -10,10 +10,10 @@ const gulp = require('gulp'),
     EasyImport = require('postcss-easy-import');
 
 gulp.task('css', function () {
-  var plugins = [
+  const plugins = [
         EasyImport,
         precss,
-        autoprefixer({browsers: ['last 2 version']}),
+        autoprefixer({browsers: ['last 2 versions']}),
         cssnano(),
   ];
   return gulp.src('src/assets/css/*.css')
@@ -51,22 +51,19 @@ gulp.task('clean', function() {
 
 gulp.task('build', ['clean', 'css'], function() {
 
-  const buildCss = gulp.src([ // CSS transfer to production folder
+  gulp.src([ // CSS transfer to production folder
     'src/assets/css/main.css',
   ])
   .pipe(gulp.dest('dist/assets/css'));
 
-  const buildFonts = gulp.src('src/assets/fonts/**/*') // Fonts transfer to production folder
+  gulp.src('src/assets/fonts/**/*') // Fonts transfer to production folder
   .pipe(gulp.dest('dist/assets/fonts'));
 
-  const buildJs = gulp.src('src/js/**/*') // Javascript transfer to production folder
+  gulp.src('src/js/**/*') // Javascript transfer to production folder
   .pipe(gulp.dest('dist/js'));
 
-  const buildImg = gulp.src('src/assets/img/**/*')
+  gulp.src('src/assets/img/**/*')
   .pipe(gulp.dest('dist/assets/img'));
-
-  // var buildHtml = gulp.src('src/*html') /*OUTDATED*/
-  // .pipe(gulp.dest('dist'));
 
 });
 
