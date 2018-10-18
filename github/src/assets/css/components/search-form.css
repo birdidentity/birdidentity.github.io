@@ -7,7 +7,7 @@
     display: none;
   }
 
-  &__input[type=search] {
+  &__input {
     -webkit-appearance: none;
     padding: 6px 8px;
     background: none;
@@ -46,9 +46,8 @@
         white-space: nowrap;
       }
 
-      &__input[type=search]  {
+      &__input {
         -webkit-appearance: none;
-        -webkit-appearance: textfield;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         @extend %Helvetica12px;
