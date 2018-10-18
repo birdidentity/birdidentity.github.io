@@ -25,6 +25,7 @@
   }
 
   &__wrapper {
+    position: relative;
     order: 0;
     flex-grow: 1;
     width: calc(50% - 45px);
@@ -53,11 +54,10 @@
     box-sizing: border-box;
     width: 100%;
     padding-left: 45px;
-    padding-top: 8px;
-    padding-bottom: 7px;
     font-weight: bold;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 30px;
+    padding-bottom: 2px;
     color: $text_gray;
     border: $borderGray;
     border-radius: 2px;
