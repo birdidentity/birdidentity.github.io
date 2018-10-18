@@ -8,7 +8,6 @@
   }
 
   &__input {
-    -webkit-appearance: none;
     padding: 6px 8px;
     background: none;
     border: 0;
@@ -47,7 +46,6 @@
       }
 
       &__input {
-        -webkit-appearance: none;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         @extend %Helvetica12px;
