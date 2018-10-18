@@ -47,6 +47,7 @@
       }
 
       &__input {
+        -webkit-appearance: none;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         @extend %Helvetica12px;
