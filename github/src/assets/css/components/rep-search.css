@@ -33,6 +33,8 @@
   }
 
   &__wrapper::before {
+    display: inline-block;
+    vertical-align: middle;
     position: absolute;
     content: "Type:";
     font-family: $HelveticaRegular;
@@ -50,7 +52,6 @@
 
   &__wrapper:last-child::before {
     content: "Language:";
-    display: inline-block;
   }
 
   &__select {
