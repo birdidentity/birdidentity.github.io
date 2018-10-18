@@ -25,11 +25,8 @@
         </ul>
       </nav>
       <form class="search-form">
-        <select class="search-form__select" required>
-          <option value="This organisation" class="search-form__option">This organisation</option>
-          <option value="All repositories" class="search-form__option" selected>All repositories</option>
-        </select>
-        <input type="search" placeholder="Search Github" class="search-form__input">
+        <button class="search-form__button" type="button">All repositories</button>
+        <input type="search" placeholder="Search Github" class="search-form__input g-input">
       </form>
       <div class="authorization">
         <a href="#" class="authorization__link">Sign in</a>
@@ -158,7 +155,7 @@
         </section>
       </section>
       <form action="" class="rep-search">
-        <input class="rep-search__input--search" type="search" name="" placeholder="Search repositories...">
+        <input class="rep-search__input--search g-input" type="search" name="" placeholder="Search repositories...">
         <div class="rep-search__wrapper">
           <select class="rep-search__select" name="type">
             <option class="rep-search__option" value="All" selected>All</option>

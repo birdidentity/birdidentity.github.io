@@ -10,6 +10,6 @@
   }
 
   &__item {
-    color: #586069;
+    color: $span_gray;
   }
 }

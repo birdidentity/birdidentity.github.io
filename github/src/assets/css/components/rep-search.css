@@ -53,6 +53,7 @@
 
   &__wrapper:last-child::before {
     content: "Language:";
+    display: inline-block;
   }
 
   &__select {

@@ -17,15 +17,8 @@
     width: 100%;
     border-radius: 3px;
     color: white;
-    background-color: hsla(0,0%,100%,0.125);
+    background-color: $bg_gray;
     }
-
-  &__input::-webkit-search-decoration,
-  &__input::-webkit-search-cancel-button,
-  &__input::-webkit-search-results-button,
-  &__input::-webkit-search-results-decoration {
-    display: none;
-    } /* DELETING standard cross in the search field */
 
 }
 
@@ -37,7 +30,7 @@
       padding-bottom: 0;
       display: flex;
 
-      &__select {
+      &__button {
         border: none;
         display: block;
         @extend %Helvetica12px;
@@ -47,9 +40,10 @@
         border-top-left-radius: 2px;
         border-bottom-left-radius: 2px;
         margin-right: 2px;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
         -webkit-appearance: none;
+        white-space: nowrap;
       }
 
       &__input {

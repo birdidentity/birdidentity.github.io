@@ -2,3 +2,10 @@
   margin: 0;
   padding: 0;
 }
+
+.g-input::-webkit-search-decoration,
+.g-input::-webkit-search-cancel-button,
+.g-input::-webkit-search-results-button,
+.g-input::-webkit-search-results-decoration {
+  display: none;
+  }
