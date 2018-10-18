@@ -8,5 +8,8 @@
 .g-input::-webkit-search-results-button,
 .g-input::-webkit-search-results-decoration {
   display: none;
+}
+
+.g-input {
   -webkit-appearance: none;
-  }
+}
