@@ -43,12 +43,12 @@
         margin-right: 2px;
         padding-left: 15px;
         padding-right: 15px;
-        -webkit-appearance: none;
         white-space: nowrap;
       }
 
       &__input[type=search]  {
         -webkit-appearance: none;
+        -webkit-appearance: textfield;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         @extend %Helvetica12px;
