@@ -7,7 +7,7 @@
     display: none;
   }
 
-  &__input {
+  &__input[type=search] {
     -webkit-appearance: none;
     padding: 6px 8px;
     background: none;
@@ -47,7 +47,7 @@
         white-space: nowrap;
       }
 
-      &__input {
+      &__input[type=search]  {
         -webkit-appearance: none;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
