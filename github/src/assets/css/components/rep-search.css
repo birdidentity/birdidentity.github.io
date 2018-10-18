@@ -24,12 +24,6 @@
     border: $borderGray;
   }
 
-  &__input--search::-webkit-search-decoration,
-  &__input--search::-webkit-search-cancel-button,
-  &__input--search::-webkit-search-results-decoration {
-    display: none;
-  }
-
   &__wrapper {
     order: 0;
     flex-grow: 1;
@@ -42,8 +36,7 @@
     font-family: $HelveticaRegular;
     color: $text_gray;
     font-size: 14px;
-    line-height: 16px;
-    padding-top: 10px;
+    line-height: 33px;
     padding-left: 12px;
   }
 
