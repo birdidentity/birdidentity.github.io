@@ -12,6 +12,7 @@
 
   &__projects {
     display: none;
+    height: 200vh;
   }
 
 }
