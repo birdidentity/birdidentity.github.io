@@ -2,7 +2,7 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   text-align: center;
 
@@ -25,38 +25,8 @@
     overflow: ellipsis;
   }
 
-  &__wrapper {
-    vertical-align: middle;
-    order: 0;
-    flex-grow: 1;
-    width: calc(50% - 45px);
-  }
-
-  &__wrapper::before {
-    display: inline-block;
-    position: absolute;
-    content: "Type:";
-    font-family: $HelveticaRegular;
-    font-size: 14px;
-    line-height: 16px;
-    color: $text_gray;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 12px;
-  }
-
-  &__wrapper:last-child {
-    margin-left: 5px;
-  }
-
-  &__wrapper:last-child::before {
-    content: "Language:";
-  }
-
   &__select {
-    box-sizing: border-box;
     width: 100%;
-    padding-left: 45px;
     font-weight: bold;
     font-size: 14px;
     line-height: 30px;
@@ -65,8 +35,29 @@
     border: $borderGray;
     border-radius: 2px;
     background-image: linear-gradient(#F9FAFB,#D8D8D8);
+    order: 0;
+    flex-grow: 1;
   }
 
+  &__select::before {
+    font-weight: normal;
+    display: inline-block;
+    box-sizing: border-box;
+    content: "Type:";
+    font-family: $HelveticaRegular;
+    font-size: 14px;
+    line-height: 29px;
+    color: $text_gray;
+    vertical-align: bottom;
+  }
+
+  &__select:last-child::before {
+    content: "Language:";
+  }
+
+  &__select:last-child {
+    margin-left: 5px;
+  }
 
   &__select::after {
     display: inline-block;
@@ -80,17 +71,6 @@
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
-  }
-
-  &__wrapper:last-child .rep-search__select {
-    padding-left: 77px;
-  }
-
-  &__option {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    color: $text_gray;
   }
 
 }
@@ -107,11 +87,6 @@
       min-width: 145px;
       max-width: 180px;
       margin-right: 5px;
-    }
-
-    &__wrapper {
-      width: auto;
-      flex-grow: 0;
     }
 
     &__select {
