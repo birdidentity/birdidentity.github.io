@@ -12,7 +12,7 @@ $tWhite: #fff;
 $tBlue: #248cec;
 
 $cGrayLight: #8a8a8a;
-$cGrayRegular: #333; /* main title dscr */
+$cGrayRegular: #8f8f8f; /* main title dscr */
 $cGrayMedium: #434343; /* Main title */
 $cGrayStrong: #2a2b2e; /* Latest News, Banners Place , Power Inside & etc.,*/
 $cFooterLi: #828385;
@@ -26,3 +26,7 @@ $ubuntu-l: "Ubuntu-l", Arial , sans-serif;
 $ubuntu-c: "Ubuntu-c", Arial , sans-serif;
 $ubuntu-m: "Ubuntu-m", Arial , sans-serif;
 $Arial: Arial, sans-serif;
+
+@mixin sprite($w, $h, $bg-x, $bg-y) {
+  
+}

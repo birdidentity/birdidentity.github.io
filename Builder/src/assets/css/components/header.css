@@ -1,0 +1,38 @@
+.header {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.logo {
+
+  &__img {
+    float: left;
+    margin-right: 11px;
+  }
+
+  &__title {
+    font-family: $ubuntu-m;
+    font-size: $h1Size;
+    line-height: 25px;
+    color: $cGrayMedium;
+  }
+
+  &__dscr {
+    font-family: $ubuntu-l;
+    font-size: $pSize12;
+    line-height: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: $cGrayRegular;
+    letter-spacing: 3.3px;
+    opacity: 65%;
+  }
+}
+
+.media {
+  float: right;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
