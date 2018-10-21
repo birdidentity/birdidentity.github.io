@@ -15,6 +15,7 @@
 
   &__button {
     margin-left: 0;
+    margin-right: 0;
     background-color: inherit;
     border-left: none;
     border: $borderGray;
