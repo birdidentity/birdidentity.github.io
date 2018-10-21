@@ -14,11 +14,10 @@
   }
 
   &__button {
-    display: block;
+    margin-left: 0;
     background-color: inherit;
     border-left: none;
     border: $borderGray;
-    border-left: none;
     font-family: $HelveticaRegular;
     font-weight: bold;
     font-size: 14px;
