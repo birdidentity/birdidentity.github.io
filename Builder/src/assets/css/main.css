@@ -1,0 +1,7 @@
+@import url('components/fonts.css');
+@import url('components/var.css');
+@import url('components/sprite3.css');
+
+.article__button::after {
+  content: "\2192"
+}

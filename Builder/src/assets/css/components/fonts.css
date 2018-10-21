@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'Ubuntu-l';
+	src: url('../fonts/Ubuntu-l.woff2') format('woff2'),
+	     url('../fonts/Ubuntu-l.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ubuntu-c';
+	src: url('../fonts/Ubuntu-c.woff2') format('woff2'),
+	     url('../fonts/Ubuntu-c.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ubuntu-m';
+	src: url('../fonts/Ubuntu-m.woff2') format('woff2'),
+	     url('../fonts/Ubuntu-m.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

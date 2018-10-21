@@ -1,0 +1,28 @@
+$h1Size: 30px;
+$h2Size: 24px;
+$h3Size: 20px;
+
+$pSize12: 12px;
+$pSize13: 13px;
+$pSize14: 14px;
+$pSize16: 16px;
+
+$tYellow: #f4b60d;
+$tWhite: #fff;
+$tBlue: #248cec;
+
+$cGrayLight: #8a8a8a;
+$cGrayRegular: #333; /* main title dscr */
+$cGrayMedium: #434343; /* Main title */
+$cGrayStrong: #2a2b2e; /* Latest News, Banners Place , Power Inside & etc.,*/
+$cFooterLi: #828385;
+
+$bgDarkBlue: #2a2d32;
+$bgDarkGray: #35383c;
+
+$bdGray: 1px solid #393c40;
+
+$ubuntu-l: "Ubuntu-l", Arial , sans-serif;
+$ubuntu-c: "Ubuntu-c", Arial , sans-serif;
+$ubuntu-m: "Ubuntu-m", Arial , sans-serif;
+$Arial: Arial, sans-serif;
