@@ -1,0 +1,14 @@
+{
+  "name": "builder",
+  "version": "1.0.0",
+  "description": "html/css builder.psd practice",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vladislav Boyko",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
