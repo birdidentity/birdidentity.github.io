@@ -14,7 +14,7 @@
   }
 
   &__button {
-    display: inline-block;
+    display: block;
     background-color: inherit;
     border-left: none;
     border: $borderGray;
