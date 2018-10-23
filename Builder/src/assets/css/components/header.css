@@ -12,27 +12,32 @@
   }
 
   &__title {
-    font-family: $ubuntu-m;
-    font-size: $h1Size;
-    line-height: 25px;
-    color: $cGrayMedium;
+    @include font($ubuntu-m, $h1Size, 25px, $cGrayMedium);
+    font-weight: 500;
   }
 
   &__dscr {
-    font-family: $ubuntu-l;
-    font-size: $pSize12;
-    line-height: 14px;
-    line-height: 14px;
+    @include font($ubuntu-l, $pSize12, 14px, $cGrayRegular);
     text-transform: uppercase;
-    color: $cGrayRegular;
     letter-spacing: 3.3px;
-    opacity: 65%;
+    text-indent: 2px;
   }
 }
 
 .media {
-  float: right;
   list-style-type: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  max-width: 150px;
+
+  &__item {
+
+  }
+
+
+  &__link {
+    display: block;
+    background-image: url('../img/sprite.png');
+  }
+
 }

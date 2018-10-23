@@ -22,11 +22,26 @@ $bgDarkGray: #35383c;
 
 $bdGray: 1px solid #393c40;
 
+$sprite1: url('../img/sprite.png');
+$sprite2: url('../img/sprite2.png');
+$sprite3: url('../img/sprite3.png');
+
 $ubuntu-l: "Ubuntu-l", Arial , sans-serif;
 $ubuntu-c: "Ubuntu-c", Arial , sans-serif;
 $ubuntu-m: "Ubuntu-m", Arial , sans-serif;
 $Arial: Arial, sans-serif;
 
-@mixin sprite($w, $h, $bg-x, $bg-y) {
-  
+@mixin sprite($w, $h, $bg-x, $bg-y, $sprite) {
+  width: $w;
+  height: $h;
+  background-image: $sprite;
+  background-position: $bg-x $bg-y;
+  background-repeat: no-repeat;
+}
+
+@mixin font($fontF, $fontS, $fontH, $fontC) {
+  font-family: $fontF;
+  font-size: $fontS;
+  line-height: $fontH;
+  color: $fontC;
 }
