@@ -29,14 +29,12 @@
   display: flex;
   justify-content: space-between;
   max-width: 150px;
-
-  &__item {
-
-  }
-
+  margin: 0 auto;
+  margin-top: 10px;
 
   &__link {
-    display: block;
+    vertical-align: middle;
+    display: inline-block;
     background-image: url('../img/sprite.png');
   }
 
