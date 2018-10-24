@@ -3,6 +3,7 @@
   top: 0;
   width: 100%;
   position: fixed;
+  display: none;
 
   &__list {
     display: flex;
@@ -23,12 +24,40 @@
     text-align: center;
     padding-top: 10px;
     padding-bottom: 9px;
+
+    &:hover, &:focus {
+      color: $tYellow;
+    }
   }
 
-  &__link:hover {
-    color: $tYellow;
-    background-color: $tBlue;
-  }
+  &__button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
 
+    &:after {
+      display: inline-block;
+      position: absolute;
+      text-align: center;
+      content:"\2261";
+      font-size: 30px;
+      line-height: 20px;
+      width: 100%;
+      color: $cGrayStrong;
+      top:0;
+      right: 0;
+    }
+
+    &:hover:after {
+      content: "\00D7";
+      color: $tWhite;
+    }
+
+  }
 
 }

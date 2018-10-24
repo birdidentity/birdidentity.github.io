@@ -5,6 +5,8 @@
 }
 
 .logo {
+  width: 80%;
+  margin: 0 auto;
 
   &__img {
     float: left;
@@ -19,7 +21,7 @@
   &__dscr {
     @include font($ubuntu-l, $pSize12, 14px, $cGrayRegular);
     text-transform: uppercase;
-    letter-spacing: 3.3px;
+    letter-spacing: 3.5px;
     text-indent: 2px;
   }
 }
