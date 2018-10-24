@@ -1,0 +1,45 @@
+.article {
+  background-repeat: no-repeat;
+  background-position: 43% 10%;
+  clear: both;
+
+  @for $i from 1 through 3 {
+    &:nth-child(#{$i})::before {
+      display: inline-block;
+      content: "0#{$i}";
+      float: left;
+      top: 0;
+      @include font($ubuntu-m, 90px, 75px, $tLightGray);
+    }
+
+    &:nth-child(#{$i}) {
+      background-image: url('../img/sprite2/#{$i}.png');
+    }
+  }
+
+  &__title {
+    padding-top: 51px;
+    text-indent: 5px;
+    @include font($ubuntu-m, $h3Size, 24px, $cGrayStrong);
+  }
+
+  &__dscr {
+    padding-top: 20px;
+    word-spacing: 2px;
+    @include font($Arial, $pSize13, 15px, $cGrayLight);
+  }
+
+  &__button {
+    float: right;
+    border: none;
+    background-color: transparent;
+
+    &::after {
+      display: inline-block;
+      content:".";
+      height: 0;
+      clear: both;
+    }
+  }
+
+}

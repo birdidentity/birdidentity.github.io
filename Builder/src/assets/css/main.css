@@ -5,6 +5,9 @@
 @import url('components/header.css');
 @import url('components/navigation.css');
 @import url('components/search-form.css');
+@import url('components/content.css');
+@import url('components/slider.css');
+@import url('components/articles.css');
 
 @import url('components/effects.css');
 
