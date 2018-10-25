@@ -1,7 +1,6 @@
 .article {
   background-repeat: no-repeat;
   background-position: 43% 10%;
-  clear: both;
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i})::before {
@@ -30,15 +29,36 @@
   }
 
   &__button {
+    margin-top: 20px;
     float: right;
     border: none;
     background-color: transparent;
+    @include font($ubuntu-m, $pSize13, 15px, $cGrayStrong);
 
-    &::after {
+    &:after {
       display: inline-block;
-      content:".";
-      height: 0;
+      content: "\2192";
+      color: $tBlue;
+      text-indent: 5px;
+    }
+
+    &:hover {
+      color: $tBlue;
+
+      &:after {
+        color: $tLightBlue;
+      }
+
+    }
+  }
+
+  &__fix {
+    &:after {
       clear: both;
+      display: block;
+      content: '.';
+      height: 0;
+      overflow: hidden;
     }
   }
 

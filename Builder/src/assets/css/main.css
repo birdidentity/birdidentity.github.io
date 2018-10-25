@@ -10,9 +10,3 @@
 @import url('components/articles.css');
 
 @import url('components/effects.css');
-
-
-
-.article__button::after {
-  content: "\2192"
-}
