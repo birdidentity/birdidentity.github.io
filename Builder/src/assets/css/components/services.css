@@ -1,0 +1,59 @@
+.services {
+  padding-top: 20px;
+  background-color: $bgDarkBlue;
+
+  &__title {
+    @include font($ubuntu-m, $h2Size, 24px, $tWhite);
+    text-align: center;
+  }
+
+  &__wrapper {
+    padding-top: 20px;
+  }
+
+}
+
+.services-article {
+
+  text-align: center;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  &__content-wrapper {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__content-wrapper:after {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content:"+";
+    @include font(transparent, 60px, 260px, $tWhite);
+    vertical-align: middle;
+    width: 260px;
+    height: 260px;
+    background-color: $bgBlueHover;
+  }
+
+  &__content-wrapper:hover {
+
+    &:after {
+      display: inline-block;
+    }
+
+  }
+
+  &__content-wrapper:hover &__dscr {
+    color: $tYellow;
+  }
+
+  &__dscr {
+    @include font($ubuntu-m , $pSize16, 18px, $tWhite)
+  }
+
+
+
+}

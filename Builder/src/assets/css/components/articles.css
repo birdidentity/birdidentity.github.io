@@ -1,6 +1,13 @@
 .article {
   background-repeat: no-repeat;
   background-position: 43% 10%;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  &__wrapper {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i})::before {
