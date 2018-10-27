@@ -4,6 +4,11 @@
   width: 100%;
   position: fixed;
   display: none;
+  z-index: 3;
+
+  &:hover {
+    display: block;
+  }
 
   &__list {
     display: flex;
@@ -33,12 +38,13 @@
   &__button {
     width: 20px;
     height: 20px;
-    position: absolute;
+    position: fixed;
     right: 10px;
     top: 10px;
     border: none;
     padding: 0;
     background-color: transparent;
+    z-index: 2;
 
     &:after {
       display: inline-block;
@@ -51,6 +57,10 @@
       color: $cGrayStrong;
       top:0;
       right: 0;
+    }
+
+    &:focus + .nav {
+      display: block;
     }
 
     &:hover:after {

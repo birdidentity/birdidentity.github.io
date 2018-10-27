@@ -1,0 +1,52 @@
+.banners {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &__title {
+    @include font($ubuntu-m, $h2Size, 28px, $bgDarkBlue);
+    text-align: center;
+  }
+
+  &__details {
+    margin-top: 5px;
+    -webkit-appearance: none;
+  }
+
+  &__summary {
+    border: $bdLightGray;
+    text-transform: uppercase;
+    @include font($ubuntu-m, $pSize13, 15px, $bgDarkBlue);
+    line-height: 37px;
+    outline: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+  }
+
+  &__summary:before {
+
+    display: inline-block;
+    text-align: center;
+    content: "\002B";
+    width: 39px;
+    font-size: 20px;
+    line-height: 37px;
+    border-right: $bdLightGray;
+    margin-right: 10px;
+  }
+
+  &__details[open] &__summary {
+
+    background-color: $tYellow;
+
+    &:before {
+      content: "\2212";
+      color: $tWhite;
+    }
+
+  }
+
+}

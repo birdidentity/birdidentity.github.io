@@ -5,6 +5,7 @@ $h3Size: 20px;
 $pSize12: 12px;
 $pSize13: 13px;
 $pSize14: 14px;
+$pSize15: 15px;
 $pSize16: 16px;
 
 $tYellow: #f4b60d;
@@ -12,6 +13,7 @@ $tWhite: #fff;
 $tLightGray: #efeff0;
 $tBlue: #248cec;
 $tLightBlue: #989fb3;
+$commentC: #9d9d9d;
 
 $cGrayLight: #8a8a8a;
 $cGrayRegular: #8f8f8f; /* main title dscr */
@@ -22,10 +24,13 @@ $cSearchGray: #626466;
 
 $bgDarkBlue: #2a2d32;
 $bgDarkGray: #35383c;
+$bgLightGray: #f7f7f7;
 $bgBlueHover: rgba(36,140,236, 0.9);
+$outline: 2px solid $tBlue;
 
 $bdGray: 1px solid #393c40;
 $bdDarkGray: 1px solid #181a1d;
+$bdLightGray: 1px solid #e8e8e8;
 
 $sprite1: url('../img/sprite.png');
 $sprite2: url('../img/sprite2.png');
@@ -44,7 +49,7 @@ $Arial: Arial, sans-serif;
   background-repeat: no-repeat;
 }
 
-@mixin font($fontF, $fontS, $fontH, $fontC) {
+@mixin font($fontF: transparent, $fontS: transparent, $fontH: transparent, $fontC: transparent) {
   font-family: $fontF;
   font-size: $fontS;
   line-height: $fontH;

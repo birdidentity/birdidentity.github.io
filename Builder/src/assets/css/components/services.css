@@ -54,6 +54,4 @@
     @include font($ubuntu-m , $pSize16, 18px, $tWhite)
   }
 
-
-
 }

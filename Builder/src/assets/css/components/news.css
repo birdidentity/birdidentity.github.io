@@ -1,0 +1,61 @@
+.news {
+
+  &__title {
+    @include font($ubuntu-m, $h2Size, 28px, $bgDarkBlue);
+    text-align: center;
+  }
+
+  &__img-wrapper {
+    margin: 0 auto;
+    padding-top: 20px;
+    display: inline-block;
+    max-width: auto;
+    margin-left: calc(50% - 95px);
+  }
+
+  &__date {
+    position: relative;
+    float: left;
+    clear: both;
+    margin-top: 15px;
+    margin-right: -20px;
+    background-color: $tBlue;
+    z-index: 2;
+    width: 40px;
+    @include font($ubuntu-m, $pSize15, 40px, $tWhite);
+    text-align: center;
+  }
+
+  &__date--color {
+    margin-top: 0;
+    color: $cGrayStrong;
+    background-color: $tYellow;
+  }
+
+  &__article-title {
+    text-align: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    @include font($ubuntu-m, $pSize16, 18px, $bgDarkBlue);
+
+    &:hover {
+      color: $tBlue;
+    }
+  }
+
+  &__item {
+    @include font($Arial, $pSize13, 15px, $commentC);
+    font-style: normal;
+  }
+
+  &__color-mod {
+    color: $tBlue;
+  }
+
+  &__dscr {
+    @include font($Arial, $pSize13, 14px, $cGrayLight);
+  }
+
+}

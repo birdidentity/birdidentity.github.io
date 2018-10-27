@@ -24,6 +24,7 @@
       <li class="media__item"><a href="#" class="media__link icon-twitter"></a></li>
     </ul>
 
+    <button class="nav__button" type="button"></button>
     <nav class="nav">
       <ul class="nav__list mn-clr pd-clr">
         <li class="nav__item"><a href="#" class="nav__link active-nav">home</a></li>
@@ -36,7 +37,6 @@
         <input type="search" class="search-form__input" placeholder="Search...">
       </form>
     </nav>
-    <button class="nav__button" type="button"></button>
   </header>
 
   <main class="content">
@@ -102,19 +102,19 @@
       </div>
     </section>
 
-    <div class="news-banners__wrapper">
+    <div class="news-banners">
 
       <section class="news">
-        <h2 class="news__title">Latest News</h2>
+        <h2 class="news__title mn-clr">Latest News</h2>
         <article class="news__article">
           <div class="news__img-wrapper">
             <span class="news__date">Jan</span>
-            <span class="news__date">23</span>
+            <span class="news__date news__date--color">23</span>
             <img src="dist/assets/img/news1.jpg" alt="news" class="news__img">
           </div>
-          <h4 class="news__article-title">Advanced Machinery Helps Improve Quality</h4>
+          <h4 class="news__article-title"><a href="#" class="news__link">Advanced Machinery Helps Improve Quality</a></h4>
           <div class="news__author">
-            <i class="news__item">by<span class="news__color-mod">cmsmasters</span></i>
+            <i class="news__item">by <span class="news__color-mod">cmsmasters</span></i>
             <i class="news__item">Comments (<span class="news__color-mod">6</span>)</i>
           </div>
           <p class="news__dscr">Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
@@ -122,11 +122,11 @@
         <article class="news__article">
           <div class="news__img-wrapper">
             <span class="news__date">Jan</span>
-            <span class="news__date">21</span>
+            <span class="news__date news__date--color">21</span>
             <img src="dist/assets/img/news2.jpg" alt="news" class="news__img">
           </div>
-          <h4 class="news__article-title">Powerful Techniques for Advanced Service</h4>
-          <i class="news__item">by<span class="news__color-mod">cmsmasters</span></i>
+          <h4 class="news__article-title"><a href="#" class="news__link">Powerful Techniques for Advanced Service</a></h4>
+          <i class="news__item">by <span class="news__color-mod">cmsmasters</span></i>
           <i class="news__item">Comments (<span class="news__color-mod">3</span>)</i>
           <p class="news__dscr">Cum sociis natoque penatibus et magnis dis parturient ontesmus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
         </article>
@@ -135,7 +135,7 @@
       <section class="banners">
         <h2 class="banners__title">Banners Place</h2>
         <div class="banners__wrapper">
-          <details class="banners__details">
+          <details class="banners__details pd-clr">
             <summary class="banners__summary">Accordion Panel 1</summary>
             <p class="banners__dscr">Cum sociis natoque penatibus et magnis dis parturient mus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur momo. Cum sociis natoque penatibus et magnis dis parturient ontesmus. Nemo enim ipsam voluptatem quia ptas sit aspernatur samomoPro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur </p>
           </details>
