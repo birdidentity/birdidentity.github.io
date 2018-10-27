@@ -1,0 +1,45 @@
+.footer {
+  background-color: $bgDarkBlue;
+}
+
+.list {
+  padding-left: 20px;
+  padding-right: 20px;
+  list-style-type: none;
+
+  &__section {
+    padding-top: 30px;
+  }
+
+  &__title {
+    text-align: center;
+    @include font($ubuntu-m, $pSize16, 18px, $tWhite)
+  }
+
+  &__item {
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: $bdGray;
+  }
+
+  &__item--last-child {
+    border-bottom: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    @include font($Arial, $pSize13, 15px, $cFooterLi);
+
+    &:hover,
+    &:focus {
+      color: $tBlue;
+    }
+  }
+}
+
+.address {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $bgDarkGray;
+}

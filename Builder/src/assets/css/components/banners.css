@@ -41,12 +41,19 @@
   &__details[open] &__summary {
 
     background-color: $tYellow;
+    color: $tWhite;
 
     &:before {
       content: "\2212";
       color: $tWhite;
     }
 
+  }
+
+  &__dscr {
+    margin-left: 42px;
+    margin-bottom: 40px;
+    @include font($Arial, $pSize13, 15px, $cGrayLight)
   }
 
 }

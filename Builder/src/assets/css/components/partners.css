@@ -1,0 +1,12 @@
+.partners {
+  text-align: center;
+  padding: 20px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  &__img {
+    margin-top: 20px;
+  }
+}
