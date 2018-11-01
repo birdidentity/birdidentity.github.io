@@ -14,6 +14,7 @@ $span_gray: #586069;
 $disabled: rgba(155, 155, 155, 0.7985);
 $bg_gray: hsla(0,0%,100%,0.125);
 $borderGray: 1px solid $border_gray;
+$Cfocus: rgba(0,0,0, 0.9);
 
 %Helvetica12px {
   font-family: $HelveticaRegular;

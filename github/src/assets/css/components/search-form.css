@@ -18,6 +18,11 @@
     border-radius: 3px;
     color: white;
     background-color: $bg_gray;
+
+      &:focus,
+      &:hover {
+        background-color: $Cfocus;
+      }
     }
 
 }
@@ -43,6 +48,11 @@
         padding-left: 15px;
         padding-right: 15px;
         white-space: nowrap;
+
+        &:focus,
+        &:hover {
+          background-color: $Cfocus;
+        }
       }
 
       &__input {

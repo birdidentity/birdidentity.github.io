@@ -32,6 +32,11 @@
     text-decoration: none;
     font-family: $HelveticaRegular;
     font-weight: 300;
+
+    &:hover,
+    &:focus {
+      color: $blue_title;
+    }
   }
 
 }
