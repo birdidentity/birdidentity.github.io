@@ -1,13 +1,15 @@
 const gulp = require('gulp'),
-    precss = require('precss'),
-    postcss = require('gulp-postcss'),
-    autoprefixer = require('autoprefixer'),
-    cssnano = require('cssnano'), // added to minimize css
-    sourcemaps = require('gulp-sourcemaps'),
-    browserSync = require('browser-sync'),
-    del = require('del'), // added to delete files and folders
-    cache = require('gulp-cache'), // added for caching
-    EasyImport = require('postcss-easy-import');
+      precss = require('precss'),
+      postcss = require('gulp-postcss'),
+      autoprefixer = require('autoprefixer'),
+      cssnano = require('cssnano'), // added to minimize css
+      sourcemaps = require('gulp-sourcemaps'),
+      browserSync = require('browser-sync'),
+      del = require('del'), // added to delete files and folders
+      cache = require('gulp-cache'), // added for caching
+      EasyImport = require('postcss-easy-import'),
+      concat = require('gulp-concat');
+
 
 gulp.task('css', function () {
   const plugins = [
@@ -25,7 +27,8 @@ gulp.task('css', function () {
 
 gulp.task('javascript', function () {
 
-  return gulp.src('src/js/*.js')
+  return gulp.src(['./src/js/widget/navigation.js', './src/js/widget/description.js', './src/js/widget/search-form.js', './src/js/widget/tabs.js', './src/js/widget/pagination.js'])
+    .pipe(concat('script.js'))
     .pipe( gulp.dest('./dist/js') )
     .pipe(browserSync.reload({stream: true})) // autoreload JS
 });

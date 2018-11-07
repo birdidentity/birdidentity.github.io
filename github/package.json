@@ -15,9 +15,18 @@
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^1.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-include": "^2.3.1",
+    "gulp-js-import": "^1.0.6",
     "gulp-postcss": "^8.0.0",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
     "postcss-easy-import": "^3.0.0",
-    "precss": "^3.1.2"
+    "precss": "^3.1.2",
+    "pump": "^3.0.0"
+  },
+  "dependencies": {
+    "include": "^1.1.0"
   }
 }
