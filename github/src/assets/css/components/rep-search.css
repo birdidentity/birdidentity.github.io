@@ -23,6 +23,11 @@
     border-radius: 2px;
     border: $borderGray;
     overflow: ellipsis;
+
+    &:hover,
+    &:focus {
+      background-color: $gray;
+    }
   }
 
   &__select {
@@ -37,6 +42,11 @@
     background-image: linear-gradient(#F9FAFB,#D8D8D8);
     order: 0;
     flex-grow: 1;
+
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(#EEEEEE,#D8D8D8);
+    }
   }
 
   &__select::before {

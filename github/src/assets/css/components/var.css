@@ -11,6 +11,7 @@ $bg_search: #3F4448;
 $select-color: #B4B7B9;
 $counter: #9B9B9B;
 $span_gray: #586069;
+$gray: #eee;
 $disabled: rgba(155, 155, 155, 0.7985);
 $bg_gray: hsla(0,0%,100%,0.125);
 $borderGray: 1px solid $border_gray;
