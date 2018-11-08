@@ -42,3 +42,11 @@
   }
 
 }
+
+@media screen and (min-width: 375px) {
+
+  .logo {
+    width: 70%;
+  }
+
+}

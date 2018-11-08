@@ -70,3 +70,14 @@
   }
 
 }
+
+@media screen and (min-width: 375px) {
+
+  .article {
+
+    &__title {
+      text-indent: 27px;
+    }
+  }
+
+}

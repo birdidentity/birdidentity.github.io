@@ -13,10 +13,14 @@
   }
 
   &__summary {
+    position: relative;
     border: $bdLightGray;
     text-transform: uppercase;
+    box-sizing: border-box;
     @include font($ubuntu-m, $pSize13, 15px, $bgDarkBlue);
     line-height: 37px;
+    padding-left: 40px;
+    text-indent: 10px;
     outline: none;
     cursor: pointer;
 
@@ -27,15 +31,16 @@
   }
 
   &__summary:before {
-
-    display: inline-block;
+    display: block;
+    position: absolute;
+    left: 0;
     text-align: center;
     content: "\002B";
     width: 39px;
     font-size: 20px;
     line-height: 37px;
+    text-indent: 0;
     border-right: $bdLightGray;
-    margin-right: 10px;
   }
 
   &__details[open] &__summary {
