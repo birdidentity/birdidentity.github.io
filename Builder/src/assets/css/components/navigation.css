@@ -44,7 +44,7 @@
     border: none;
     padding: 0;
     background-color: transparent;
-    z-index: 2;
+    z-index: 4;
 
     &:after {
       display: inline-block;
