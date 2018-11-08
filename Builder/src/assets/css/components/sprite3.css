@@ -16,22 +16,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-email {
-
+.icon-email::before {
   background-repeat: no-repeat;
   background-image: url('../img/sprite3.png');
   background-position: 0px 0px;
   width: 16px;
   height: 13px;
 }
-.icon-location {
-  background-image: url(sprite3.png);
+.icon-location::before  {
+  left: 1px;
+  background-repeat: no-repeat;
+  background-image: url('../img/sprite3.png');
   background-position: 0px -13px;
-  width: 12px;
+  width: 13px;
   height: 16px;
 }
-.icon-phone {
-  background-image: url(sprite3.png);
+.icon-phone::before  {
+  left: 2px;
+  background-repeat: no-repeat;
+  background-image: url('../img/sprite3.png');
   background-position: -16px 0px;
   width: 10px;
   height: 16px;
