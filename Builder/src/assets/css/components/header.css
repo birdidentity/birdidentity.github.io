@@ -6,7 +6,7 @@
 }
 
 .logo {
-  width: 80%;
+  width: 220px;
   margin: 0 auto;
 
   &__img {
@@ -43,10 +43,25 @@
 
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 768px) {
+
+  .header:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
 
   .logo {
-    width: 70%;
+    float: left;
+  }
+
+  .media {
+    float: right;
+    margin-top: 5px;
+
+    &__item {
+      margin-left: 10px;
+    }
   }
 
 }

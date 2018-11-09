@@ -72,6 +72,40 @@
 
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 768px) {
+
+  .nav {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    clear: both;
+    position: sticky;
+    top: 0;
+
+    &:hover {
+      display: flex;
+    }
+
+    &__list {
+      width: 100%;
+      flex-direction: row;
+      background-color: $bgDarkBlue;
+    }
+
+    &__item {
+      border-bottom: none;
+      border-right: $bdDarkGray;
+    }
+
+    &__link {
+      padding-left: 30px;
+      padding-right: 29px;
+      line-height: 31px;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
 
 }

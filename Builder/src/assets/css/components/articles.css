@@ -20,6 +20,7 @@
 
     &:nth-child(#{$i}) {
       background-image: url('../img/sprite2/#{$i}.png');
+      background-position-y: 12px;
     }
   }
 
@@ -78,6 +79,33 @@
     &__title {
       text-indent: 27px;
     }
+  }
+
+}
+
+@media screen and (min-width: 375px) {
+
+  .article {
+    background-position-x: 130px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .article {
+
+    &__wrapper {
+      display: flex;
+    }
+
+    &__title {
+      padding-top: 10px;
+      text-indent: 0px;
+      clear: both;
+    }
+
+
   }
 
 }
