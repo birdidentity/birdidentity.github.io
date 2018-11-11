@@ -19,6 +19,11 @@
     background-repeat: no-repeat;
     background-position-x: 97%;
     background-position-y: 6px;
+
+    &:hover,
+    &:focus {
+      background-color: $cBlack;
+    }
   }
 }
 

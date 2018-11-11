@@ -67,3 +67,33 @@
     text-align: right;
   }
 }
+
+@media screen and (min-width: 768px) {
+
+  .list {
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .address {
+    display: flex;
+
+    &__item {
+      margin-left: 15px;
+
+      &--first-child {
+        margin-left: 0;
+      }
+
+      &--last-child {
+        margin-top: 6px;
+        margin-left: auto;
+      }
+    }
+
+  }
+
+}

@@ -62,3 +62,16 @@
   }
 
 }
+
+@media screen and (min-width:768px) {
+
+  .banners {
+    padding-top: 0;
+    width: calc(50% - 20px);
+
+    &__title {
+      margin-top: 0;
+    }
+  }
+
+}

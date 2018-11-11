@@ -1,7 +1,7 @@
 .partners {
   text-align: center;
   padding: 20px;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
@@ -9,4 +9,12 @@
   &__img {
     margin-top: 20px;
   }
+}
+
+@media screen and (min-width: 768px) {
+
+  .partners {
+    justify-content: space-around;
+  }
+
 }

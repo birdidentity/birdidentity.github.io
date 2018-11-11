@@ -59,3 +59,12 @@
   }
 
 }
+
+@media screen and (min-width: 768px) {
+
+  .news {
+    width: calc(50% - 20px);
+    margin-right: 40px;
+  }
+
+}
