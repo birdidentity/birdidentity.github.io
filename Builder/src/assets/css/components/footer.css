@@ -97,3 +97,24 @@
   }
 
 }
+
+@media screen and (min-width: 1024px) {
+
+  .address {
+
+    &__item {
+      margin-left: 25px;
+
+      &--first-child {
+        margin-left: 0;
+      }
+
+      &--last-child {
+        margin-left: auto;
+      }
+
+    }
+
+  }
+
+}

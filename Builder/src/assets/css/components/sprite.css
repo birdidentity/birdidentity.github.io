@@ -21,7 +21,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 8px;
   height: 16px;
 }
-.icon-facebook:hover {
+.icon-facebook:hover,
+.icon-facebook:focus {
   background-position: -47px -16px;
   width: 8px;
   height: 16px;
@@ -31,7 +32,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 15px;
   height: 15px;
 }
-.icon-linkedin:hover{
+.icon-linkedin:hover,
+.icon-linkedin:focus {
   background-position: -15px -16px;
   width: 15px;
   height: 15px;
@@ -41,7 +43,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 15px;
   height: 15px;
 }
-.icon-rss:hover {
+.icon-rss:hover,
+.icon-rss:focus {
   background-position: -32px -15px;
   width: 15px;
   height: 15px;
@@ -51,7 +54,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 16px;
   height: 16px;
 }
-.icon-skype:hover {
+.icon-skype:hover,
+.icon-skype:focus {
   background-position: -16px 0px;
   width: 16px;
   height: 16px;
@@ -61,7 +65,8 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 15px;
   height: 13px;
 }
-.icon-twitter:hover {
+.icon-twitter:hover,
+.icon-twitter:focus {
   background-position: -15px -31px;
   width: 15px;
   height: 13px;

@@ -55,3 +55,37 @@
   }
 
 }
+
+@media screen and (min-width: 1024px) {
+
+  .services {
+
+    &__title {
+      text-align: left;
+      text-indent: 20px;
+    }
+
+    &__wrapper {
+      padding-top: 50px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+  }
+
+  .services-article {
+
+    &__content-wrapper:after {
+      width: calc(260px - 20%);
+      height: calc(261px - 20%);
+      left: 26px;
+      line-height: 208px;
+    }
+
+    &__img {
+      width: 80%;
+    }
+
+  }
+
+}

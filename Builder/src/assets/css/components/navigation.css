@@ -59,13 +59,15 @@
       right: 0;
     }
 
-    &:focus + .nav {
-      display: block;
-    }
-
-    &:hover:after {
+    &:hover:after,
+    &:focus:after {
       content: "\00D7";
       color: $tWhite;
+    }
+
+    &:focus + .nav {
+      display: block;
+
     }
 
   }
@@ -81,6 +83,8 @@
     clear: both;
     position: sticky;
     top: 0;
+    border-bottom: $bdDarkGray;
+    border-top: $bdDarkGray;
 
     &:hover {
       display: flex;
@@ -106,6 +110,15 @@
     &__button {
       display: none;
     }
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .nav {
+    position: relative;
+    border: none;
   }
 
 }
