@@ -72,6 +72,7 @@
 @media screen and (min-width: 1024px) {
 
   .news {
+    padding-bottom: 20px;
 
     &__title {
       text-align: left;

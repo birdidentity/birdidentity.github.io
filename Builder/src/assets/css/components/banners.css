@@ -75,3 +75,16 @@
   }
 
 }
+
+@media screen and (min-width: 1024px) {
+
+  .banners {
+
+    &__title {
+      text-align: left;
+      padding-bottom: 20px;
+    }
+
+  }
+
+}
